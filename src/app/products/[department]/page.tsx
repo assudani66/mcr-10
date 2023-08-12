@@ -1,9 +1,5 @@
 import React from 'react'
 
-const page = ({ department }: { department: string }) => {
-    return (
-        <div>{department}</div>
-    )
+export default function Page({ params }: { params: { department: string } }) {
+    return <div>{params.department}</div>
 }
-
-export default page
