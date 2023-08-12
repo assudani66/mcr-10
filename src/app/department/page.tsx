@@ -5,7 +5,7 @@ import React from 'react'
 
 const page = () => {
     return (
-        <nav>
+        <nav className='flex p-10 space-x-5'>
             {departmentNavBar.map(({ name, route }) => <NavBarCard key={route}>
                 <Link href={route}>{name}</Link>
             </NavBarCard>
