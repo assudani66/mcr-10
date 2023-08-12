@@ -1,8 +1,16 @@
+import { NavBarCard } from '@/components'
+import { departmentNavBar } from '@/libs/constants'
+import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
     return (
-        <div>page</div>
+        <nav>
+            {departmentNavBar.map(({ name, route }) => <NavBarCard key={route}>
+                <Link href={route}>{name}</Link>
+            </NavBarCard>
+            )}
+        </nav>
     )
 }
 

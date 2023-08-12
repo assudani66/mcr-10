@@ -53,3 +53,18 @@ export const sideNavBar = [
     route: "/products",
   },
 ];
+
+export const departmentNavBar = [
+  {
+    name: "Kitchen",
+    route: "/products/kitchen",
+  },
+  {
+    name: "Clothing",
+    route: "/products/clothing",
+  },
+  {
+    name: "Toys",
+    route: "/products/toys",
+  },
+];
