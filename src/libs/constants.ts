@@ -38,3 +38,18 @@ export const homeNavFilters = [
     method: "AMOUNT",
   },
 ];
+
+export const sideNavBar = [
+  {
+    name: "DashBoard",
+    route: "/",
+  },
+  {
+    name: "Departments",
+    route: "/department",
+  },
+  {
+    name: "Products",
+    route: "/products",
+  },
+];
