@@ -1,9 +1,11 @@
 "use client"
 import { departmentNavBar, sortCategory } from "@/libs/constants";
 import { FilterActionKind, useDataContext } from "@/store/data";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const ProductFilters = () => {
+    const router = useRouter()
     const { filterState, filterDispatch, addItem } = useDataContext();
     const dummyData = {
         id: 23,
@@ -61,7 +63,7 @@ const ProductFilters = () => {
                     <option value={keyValue} key={index}>{name}</option>
                 ))}
             </select>
-            <button className="bg-blue-600 text-white text-bold p-2 w-fit h-fit px-4" onClick={() => addItem(dummyData)}>
+            <button className="bg-blue-600 text-white text-bold p-2 w-fit h-fit px-4" onClick={() => router.push("/add")}>
                 New
             </button>
         </div>
