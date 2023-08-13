@@ -4,7 +4,20 @@ import { FilterActionKind, useDataContext } from "@/store/data";
 import React from "react";
 
 const ProductFilters = () => {
-    const { filterState, filterDispatch } = useDataContext();
+    const { filterState, filterDispatch, addItem } = useDataContext();
+    const dummyData = {
+        id: 23,
+        department: "Kitchen",
+        name: "Ptainless Steel Cookware Set",
+        description:
+            "A set of high-quality stainless steel cookware including pots and pans.",
+        price: 149.99,
+        stock: 15,
+        sku: "KITCH001",
+        supplier: "KitchenWonders Inc.",
+        delivered: 15,
+        imageUrl: "https://m.media-amazon.com/images/I/616vJsA33kL.jpg",
+    }
     return (
         <div className="flex w-full space-x-2 justify-between items-center">
             <p className="p-2 text-2xl">Product</p>
@@ -48,7 +61,7 @@ const ProductFilters = () => {
                     <option value={keyValue} key={index}>{name}</option>
                 ))}
             </select>
-            <button className="bg-blue-600 text-white text-bold p-2 w-fit h-fit px-4">
+            <button className="bg-blue-600 text-white text-bold p-2 w-fit h-fit px-4" onClick={() => addItem(dummyData)}>
                 New
             </button>
         </div>

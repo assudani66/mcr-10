@@ -1,4 +1,5 @@
 "use client"
+import { dataFields } from '@/libs/constants'
 import { useDataContext } from '@/store/data'
 import Link from 'next/link'
 import React from 'react'
@@ -22,13 +23,8 @@ const ProductList = () => {
 
     return (
         <table className='w-full'>
-            <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Stock</th>
-                <th>Supplier</th>
+            <tr className='bg-slate-600 p-2 text-white'>
+                {dataFields.map((data, index) => <th key={index}>{data}</th>)}
             </tr>
             {
                 sortedState?.map(
@@ -37,7 +33,7 @@ const ProductList = () => {
                             <img className='w-40' src={product.imageUrl} />
                         </td>
                         <td>
-                            <Link href={`product/${product?.id}`}>{product?.name}</Link>
+                            <Link href={`products/view/${product?.id}`}>{product?.name}</Link>
                         </td>
                         <td>
                             <p>{product?.description}</p>

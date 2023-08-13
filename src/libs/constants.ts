@@ -74,3 +74,12 @@ export const sortCategory = [
   { name: "Price", keyValue: "price" },
   { name: "Stock", keyValue: "stock" },
 ];
+
+export const dataFields = [
+  "Image",
+  "Name",
+  "Description",
+  "Price",
+  "Stock",
+  "Supplier",
+];
