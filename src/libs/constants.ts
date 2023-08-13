@@ -68,3 +68,9 @@ export const departmentNavBar = [
     route: "/products/toys",
   },
 ];
+
+export const sortCategory = [
+  { name: "Name", keyValue: "name" },
+  { name: "Price", keyValue: "price" },
+  { name: "Stock", keyValue: "stock" },
+];
