@@ -26,7 +26,7 @@ const AddItemComponent = () => {
         setFormValue({ ...formValue, [e.target.name]: e.target.value })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault()
         const newId = (data?.length || 0) + 1;
         const formData: itemType = { ...dummyData, id: newId, ...formValue };
